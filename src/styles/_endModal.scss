@@ -7,7 +7,7 @@
   z-index: 4;
   background-color: black;
   opacity: 0.95;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 .endModal {
@@ -21,7 +21,7 @@
   font-size: 0.8em;
   z-index: 1;
   position: relative;
-  top: 3.5em;
+  top: 5em;
   transform: translateX(30%);
 
   &__close {
@@ -39,16 +39,18 @@
   }
 
   &__msg {
-    margin-top: 0.5em;
+    margin-top: 0.6em;
+    font-size: 1.5em;
   }
 
   &__counterMsg {
     font-family: "studyalone";
+    margin-top: 1em;
   }
 
   &__btnAccueil {
     font-size: 20px;
     position: relative;
-    bottom: -15%;
+    bottom: -55%;
   }
 }

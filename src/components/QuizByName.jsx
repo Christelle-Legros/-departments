@@ -123,7 +123,7 @@ const QuizByName = () => {
             </button>
           )}
 
-          <div className="quizByName_container__nbGoodAnswers">
+          <div>
             {counterGoodAnswers <= 1 ? (
               <div className="quizByName_container__nbGoodAnswers">
                 Vous avez {counterGoodAnswers} bonne réponse
