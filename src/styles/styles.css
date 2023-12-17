@@ -1,0 +1,177 @@
+* {
+  background-color: #23b0bd;
+  font-family: "milkmango";
+  font-size: 1.2em;
+}
+
+button {
+  background-color: #f65b74;
+  border: 0;
+  border-radius: 10px;
+  padding: 1em;
+  margin: 1em;
+  font-size: 30px;
+}
+
+button:hover {
+  background-color: #23b0bd;
+  border: 1px white solid;
+  transition: 0.2s ease-in-out;
+}
+
+.quizByNumber_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vh;
+  max-height: 50%;
+}
+.quizByNumber_container__winnerMsg {
+  font-family: "starborn";
+  color: #f8cd82;
+}
+.quizByNumber_container__questionTitle {
+  margin-bottom: 0.6em;
+}
+.quizByNumber_container__departmentName {
+  margin-bottom: 0.8em;
+}
+.quizByNumber_container__nbGoodAnswers {
+  font-size: 0.9em;
+  border: 1px solid;
+  background-color: #f8cd82;
+}
+.quizByNumber_container__answerContainer {
+  display: flex;
+  align-items: center;
+}
+.quizByNumber_container__answerContainer input {
+  width: 30vw;
+  font-size: 0.8em;
+}
+.quizByNumber_container__answerContainer button {
+  height: 10vh;
+  font-size: 20px;
+}
+.quizByNumber_container__btnStart {
+  margin-bottom: 1.5em;
+}
+.quizByNumber_container__btnStartDisabled {
+  margin-bottom: 1.5em;
+  background-color: #23b0bd;
+  border: 1px white solid;
+}
+
+@font-face {
+  font-family: "starborn";
+  src: url("../fonts/Starborn.ttf");
+}
+@font-face {
+  font-family: "studyalone";
+  src: url("../fonts/StudyAlone.otf");
+}
+@font-face {
+  font-family: "milkmango";
+  src: url("../fonts/Milk Mango.ttf");
+}
+.header {
+  display: flex;
+  justify-content: center;
+}
+.header__logo {
+  width: 15vw;
+}
+.header__ptInterro {
+  width: 0.8em;
+  position: fixed;
+  top: 10px;
+  right: 20px;
+}
+
+.homeContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3em;
+}
+.homeContainer__img {
+  width: 20vw;
+  text-align: center;
+}
+.homeContainer__img__text {
+  font-family: "studyalone";
+  font-size: 0.6em;
+  text-align: center;
+}
+.homeContainer__img img {
+  height: 30vh;
+  width: 20vw;
+  border-radius: 20px;
+}
+.homeContainer__img img:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+  filter: grayscale(80%);
+}
+
+.help {
+  font-size: 0.5em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 80vh;
+  margin: 0.5em;
+}
+.help__department {
+  font-family: "studyalone";
+  list-style-type: none;
+}
+
+.endModalBackground {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  background-color: black;
+  opacity: 0.95;
+  line-height: 1.5;
+}
+
+.endModal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60vw;
+  height: 40vh;
+  box-shadow: 0 0 1em #cccccc;
+  border-radius: 10px;
+  font-size: 0.8em;
+  z-index: 1;
+  position: relative;
+  top: 3.5em;
+  transform: translateX(30%);
+}
+.endModal__close {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+}
+.endModal__close img {
+  position: absolute;
+  top: 0.3em;
+  right: 0.3em;
+  width: 2vw;
+  height: auto;
+}
+.endModal__msg {
+  margin-top: 0.5em;
+}
+.endModal__counterMsg {
+  font-family: "studyalone";
+}
+.endModal__btnAccueil {
+  font-size: 20px;
+  position: relative;
+  bottom: -15%;
+}/*# sourceMappingURL=styles.css.map */

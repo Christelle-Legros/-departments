@@ -1,0 +1,20 @@
+* {
+  background-color: #23b0bd;
+  font-family: "milkmango";
+  font-size: 1.2em;
+}
+
+button {
+  background-color: #f65b74;
+  border: 0;
+  border-radius: 10px;
+  padding: 1em;
+  margin: 1em;
+  font-size: 30px;
+}
+
+button:hover {
+  background-color: #23b0bd;
+  border: 1px white solid;
+  transition: 0.2s ease-in-out;
+}

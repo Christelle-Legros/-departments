@@ -1,0 +1,28 @@
+.homeContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3em;
+
+  &__img {
+    width: 20vw;
+    text-align: center;
+
+    &__text {
+      font-family: "studyalone";
+      font-size: 0.6em;
+      text-align: center;
+    }
+  }
+
+  &__img img {
+    height: 30vh;
+    width: 20vw;
+    border-radius: 20px;
+  }
+
+  &__img img:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+    filter: grayscale(80%);
+  }
+}

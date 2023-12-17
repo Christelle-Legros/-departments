@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: center;
+
+  &__logo {
+    width: 15vw;
+  }
+
+  &__ptInterro {
+    width: 0.8em;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+  }
+}

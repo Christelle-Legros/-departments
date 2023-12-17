@@ -1,0 +1,13 @@
+.help {
+  font-size: 0.5em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 80vh;
+  margin: 0.5em;
+
+  &__department {
+    font-family: "studyalone";
+    list-style-type: none;
+  }
+}

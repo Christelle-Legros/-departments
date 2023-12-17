@@ -1,0 +1,51 @@
+.quizByNumber_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vh;
+  max-height: 50%;
+
+  &__winnerMsg {
+    font-family: "starborn";
+    color: #f8cd82;
+  }
+
+  &__questionTitle {
+    margin-bottom: 0.6em;
+  }
+
+  &__departmentName {
+    margin-bottom: 0.8em;
+  }
+
+  &__nbGoodAnswers {
+    font-size: 0.9em;
+    border: 1px solid;
+    background-color: #f8cd82;
+  }
+
+  &__answerContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  &__answerContainer input {
+    width: 30vw;
+    font-size: 0.8em;
+  }
+
+  &__answerContainer button {
+    height: 10vh;
+    font-size: 20px;
+  }
+
+  &__btnStart {
+    margin-bottom: 1.5em;
+  }
+
+  &__btnStartDisabled {
+    margin-bottom: 1.5em;
+    background-color: #23b0bd;
+    border: 1px white solid;
+  }
+}

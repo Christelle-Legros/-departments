@@ -1,0 +1,54 @@
+.endModalBackground {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  background-color: black;
+  opacity: 0.95;
+  line-height: 1.5;
+}
+
+.endModal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60vw;
+  height: 40vh;
+  box-shadow: 0 0 1em #cccccc;
+  border-radius: 10px;
+  font-size: 0.8em;
+  z-index: 1;
+  position: relative;
+  top: 3.5em;
+  transform: translateX(30%);
+
+  &__close {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+
+    img {
+      position: absolute;
+      top: 0.3em;
+      right: 0.3em;
+      width: 2vw;
+      height: auto;
+    }
+  }
+
+  &__msg {
+    margin-top: 0.5em;
+  }
+
+  &__counterMsg {
+    font-family: "studyalone";
+  }
+
+  &__btnAccueil {
+    font-size: 20px;
+    position: relative;
+    bottom: -15%;
+  }
+}
