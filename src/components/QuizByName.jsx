@@ -59,9 +59,14 @@ const QuizByName = () => {
     randomValues();
   };
 
+  const strNoAccent = (a) => a.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
   const verifyWin = () => {
     if (counterAnswers <= 7) {
-      if (response == departmentName) {
+      if (
+        strNoAccent(response.toUpperCase()) ==
+        strNoAccent(departmentName.toUpperCase())
+      ) {
         setWinner(true);
         setCounterGoodAnswers(counterGoodAnswers + 1);
         setCounterAnswers(counterAnswers + 1);

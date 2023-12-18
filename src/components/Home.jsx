@@ -2,6 +2,7 @@ import React from "react";
 import numeros from "../assets/numeros.jpg";
 import nomsDepartements from "../assets/noms_departements.png";
 import { Link } from "react-router-dom";
+import Jokes from "./Jokes";
 
 const Home = () => {
   return (
@@ -24,6 +25,11 @@ const Home = () => {
           Trouver les noms de départements
         </div>
       </div>
+
+      {/* <div>
+        La blague du jour :
+        <Jokes />
+      </div> */}
     </div>
   );
 };
