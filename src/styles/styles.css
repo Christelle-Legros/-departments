@@ -137,27 +137,36 @@ button:hover {
 
 .homeContainer {
   display: flex;
-  justify-content: space-around;
-  margin-top: 3em;
+  flex-direction: column;
 }
-.homeContainer__img {
+.homeContainer__logos {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2.6em;
+  margin-bottom: 2em;
+}
+.homeContainer__logos__img {
   width: 20vw;
   text-align: center;
 }
-.homeContainer__img__text {
+.homeContainer__logos__img__text {
   font-family: "studyalone";
   font-size: 0.8em;
   text-align: center;
 }
-.homeContainer__img img {
-  height: 30vh;
-  width: 20vw;
+.homeContainer__logos__img img {
+  height: 25vh;
+  width: 15vw;
   border-radius: 20px;
 }
-.homeContainer__img img:hover {
+.homeContainer__logos__img img:hover {
   transform: scale(1.1);
   transition: 0.3s ease-in-out;
   filter: grayscale(80%);
+}
+.homeContainer__joke {
+  text-align: center;
+  font-size: 0.8em;
 }
 
 .help {
@@ -223,4 +232,12 @@ button:hover {
   font-size: 20px;
   position: relative;
   bottom: -55%;
+}
+
+.jokes {
+  display: flex;
+  flex-direction: column;
+}
+.jokes__jokeQuestion {
+  font-family: "studyalone";
 }/*# sourceMappingURL=styles.css.map */

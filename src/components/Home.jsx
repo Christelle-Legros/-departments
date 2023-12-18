@@ -7,29 +7,31 @@ import Jokes from "./Jokes";
 const Home = () => {
   return (
     <div className="homeContainer">
-      <div className="homeContainer__img">
-        <Link to="/bynumber">
-          <img src={numeros} alt="numéros" />
-        </Link>
-        <div className="homeContainer__img__text">
-          Trouver les numéros de départements
+      <div className="homeContainer__logos">
+        <div className="homeContainer__logos__img">
+          <Link to="/bynumber">
+            <img src={numeros} alt="numéros" />
+          </Link>
+          <div className="homeContainer__logos__img__text">
+            Trouver les numéros de départements
+          </div>
+        </div>
+
+        <div className="homeContainer__logos__img">
+          <Link to="/byname">
+            <img src={nomsDepartements} alt="Noms departements" />
+          </Link>
+
+          <div className="homeContainer__logos__img__text">
+            Trouver les noms de départements
+          </div>
         </div>
       </div>
 
-      <div className="homeContainer__img">
-        <Link to="/byname">
-          <img src={nomsDepartements} alt="Noms departements" />
-        </Link>
-
-        <div className="homeContainer__img__text">
-          Trouver les noms de départements
-        </div>
-      </div>
-
-      {/* <div>
-        La blague du jour :
+      <div className="homeContainer__joke">
+        <div className="homeContainer__joke__jokeOfDay"></div>
         <Jokes />
-      </div> */}
+      </div>
     </div>
   );
 };

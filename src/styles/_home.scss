@@ -1,28 +1,39 @@
 .homeContainer {
   display: flex;
-  justify-content: space-around;
-  margin-top: 3em;
+  flex-direction: column;
 
-  &__img {
-    width: 20vw;
-    text-align: center;
+  &__logos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2.6em;
+    margin-bottom: 2em;
 
-    &__text {
-      font-family: "studyalone";
-      font-size: 0.8em;
+    &__img {
+      width: 20vw;
       text-align: center;
+
+      &__text {
+        font-family: "studyalone";
+        font-size: 0.8em;
+        text-align: center;
+      }
+    }
+
+    &__img img {
+      height: 25vh;
+      width: 15vw;
+      border-radius: 20px;
+    }
+
+    &__img img:hover {
+      transform: scale(1.1);
+      transition: 0.3s ease-in-out;
+      filter: grayscale(80%);
     }
   }
 
-  &__img img {
-    height: 30vh;
-    width: 20vw;
-    border-radius: 20px;
-  }
-
-  &__img img:hover {
-    transform: scale(1.1);
-    transition: 0.3s ease-in-out;
-    filter: grayscale(80%);
+  &__joke {
+    text-align: center;
+    font-size: 0.8em;
   }
 }

@@ -1,0 +1,8 @@
+.jokes {
+  display: flex;
+  flex-direction: column;
+
+  &__jokeQuestion {
+    font-family: "studyalone";
+  }
+}
