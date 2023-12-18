@@ -33,6 +33,11 @@ button:hover {
 .quizByNumber_container__questionTitle {
   margin-bottom: 0.6em;
 }
+@media screen and (max-width: 768px) {
+  .quizByNumber_container__questionTitle {
+    text-align: center;
+  }
+}
 .quizByNumber_container__departmentName {
   margin-bottom: 0.8em;
 }
@@ -77,6 +82,11 @@ button:hover {
 }
 .quizByName_container__questionTitle {
   margin-bottom: 0.6em;
+}
+@media screen and (max-width: 768px) {
+  .quizByName_container__questionTitle {
+    text-align: center;
+  }
 }
 .quizByName_container__departmentNumber {
   margin-bottom: 0.8em;
@@ -143,11 +153,24 @@ button:hover {
   display: flex;
   justify-content: space-around;
   margin-top: 2.6em;
-  margin-bottom: 2em;
+}
+@media screen and (max-width: 768px) {
+  .homeContainer__logos {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+  }
 }
 .homeContainer__logos__img {
   width: 20vw;
   text-align: center;
+  margin-bottom: 1.5em;
+}
+@media screen and (max-width: 768px) {
+  .homeContainer__logos__img {
+    width: 60vw;
+  }
 }
 .homeContainer__logos__img__text {
   font-family: "studyalone";
@@ -158,6 +181,12 @@ button:hover {
   height: 25vh;
   width: 15vw;
   border-radius: 20px;
+}
+@media screen and (max-width: 768px) {
+  .homeContainer__logos__img img {
+    height: 15vh;
+    width: 40vw;
+  }
 }
 .homeContainer__logos__img img:hover {
   transform: scale(1.1);
@@ -224,6 +253,11 @@ button:hover {
   margin-top: 0.6em;
   font-size: 1.5em;
 }
+@media screen and (max-width: 768px) {
+  .endModal__msg {
+    text-align: center;
+  }
+}
 .endModal__counterMsg {
   font-family: "studyalone";
   margin-top: 1em;
@@ -242,6 +276,11 @@ button:hover {
   font-family: "studyalone";
   margin-top: 0.5em;
 }
+@media screen and (max-width: 768px) {
+  .jokes__jokeQuestion {
+    margin-top: 0;
+  }
+}
 .jokes__askJoke {
   background-color: #23b0bd;
   border: 1px solid whitesmoke;
@@ -249,16 +288,26 @@ button:hover {
   width: 20vw;
   margin: auto;
 }
+@media screen and (max-width: 768px) {
+  .jokes__askJoke {
+    width: 40vw;
+  }
+}
 .jokes__askJoke:hover {
   background-color: whitesmoke;
   border: 1px solid #23b0bd;
 }
 .jokes__answerBtn {
-  width: 15vw;
+  width: auto;
   padding: 0.5em;
 }
 .jokes__answerContainer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .jokes__answerContainer {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=styles.css.map */

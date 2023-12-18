@@ -5,6 +5,10 @@
   &__jokeQuestion {
     font-family: "studyalone";
     margin-top: 0.5em;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 0;
+    }
   }
 
   &__askJoke {
@@ -13,6 +17,10 @@
     padding: 0.5em;
     width: 20vw;
     margin: auto;
+
+    @media screen and (max-width: 768px) {
+      width: 40vw;
+    }
   }
 
   &__askJoke:hover {
@@ -21,7 +29,7 @@
   }
 
   &__answerBtn {
-    width: 15vw;
+    width: auto;
     padding: 0.5em;
   }
 
@@ -29,5 +37,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 }

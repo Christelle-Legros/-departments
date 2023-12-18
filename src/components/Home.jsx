@@ -29,7 +29,6 @@ const Home = () => {
       </div>
 
       <div className="homeContainer__joke">
-        <div className="homeContainer__joke__jokeOfDay"></div>
         <Jokes />
       </div>
     </div>

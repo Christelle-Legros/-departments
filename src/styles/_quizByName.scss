@@ -12,6 +12,10 @@
 
   &__questionTitle {
     margin-bottom: 0.6em;
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
   }
 
   &__departmentNumber {
