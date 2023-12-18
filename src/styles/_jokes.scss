@@ -4,5 +4,30 @@
 
   &__jokeQuestion {
     font-family: "studyalone";
+    margin-top: 0.5em;
+  }
+
+  &__askJoke {
+    background-color: #23b0bd;
+    border: 1px solid whitesmoke;
+    padding: 0.5em;
+    width: 20vw;
+    margin: auto;
+  }
+
+  &__askJoke:hover {
+    background-color: whitesmoke;
+    border: 1px solid #23b0bd;
+  }
+
+  &__answerBtn {
+    width: 15vw;
+    padding: 0.5em;
+  }
+
+  &__answerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

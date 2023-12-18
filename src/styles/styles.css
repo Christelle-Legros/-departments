@@ -240,4 +240,25 @@ button:hover {
 }
 .jokes__jokeQuestion {
   font-family: "studyalone";
+  margin-top: 0.5em;
+}
+.jokes__askJoke {
+  background-color: #23b0bd;
+  border: 1px solid whitesmoke;
+  padding: 0.5em;
+  width: 20vw;
+  margin: auto;
+}
+.jokes__askJoke:hover {
+  background-color: whitesmoke;
+  border: 1px solid #23b0bd;
+}
+.jokes__answerBtn {
+  width: 15vw;
+  padding: 0.5em;
+}
+.jokes__answerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=styles.css.map */

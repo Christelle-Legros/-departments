@@ -49,21 +49,23 @@ const Jokes = () => {
 
   return (
     <div className="jokes">
-      <div role="button" onClick={askJoke}>
+      <button className="jokes__askJoke" onClick={askJoke}>
         Une petite blague ?
-      </div>
+      </button>
       {showQuestion ? (
         <>
           <div className="jokes__jokeQuestion">{jokeQuestion}</div>
 
-          <button className="jokes__answerBtn" onClick={askAnswer}>
-            Réponse
-          </button>
-          {showAnswer ? (
-            <div className="jokes__jokeQuestion">{jokeAnswer}</div>
-          ) : (
-            <div></div>
-          )}
+          <div className="jokes__answerContainer">
+            <button className="jokes__answerBtn" onClick={askAnswer}>
+              Réponse
+            </button>
+            {showAnswer ? (
+              <div className="jokes__jokeQuestion">{jokeAnswer}</div>
+            ) : (
+              <div></div>
+            )}
+          </div>
         </>
       ) : (
         <div></div>
