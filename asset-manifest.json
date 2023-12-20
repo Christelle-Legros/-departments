@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Departments/static/css/main.ae45865a.css",
+    "main.js": "/Departments/static/js/main.99226a35.js",
+    "static/js/787.327c673d.chunk.js": "/Departments/static/js/787.327c673d.chunk.js",
+    "static/media/Quiz_logo.png": "/Departments/static/media/Quiz_logo.19f1008d49be52fed09b.png",
+    "static/media/numeros.jpg": "/Departments/static/media/numeros.5cad4e9984d2993a3de1.jpg",
+    "static/media/noms_departements.png": "/Departments/static/media/noms_departements.91b6a86fb192080b346a.png",
+    "static/media/StudyAlone.otf": "/Departments/static/media/StudyAlone.35fff82152143a4ebf67.otf",
+    "static/media/Milk Mango.ttf": "/Departments/static/media/Milk Mango.3c3a2bb9a3bc912c95e8.ttf",
+    "static/media/Starborn.ttf": "/Departments/static/media/Starborn.921086e813b46abea23a.ttf",
+    "static/media/croix_rouge.png": "/Departments/static/media/croix_rouge.f0be27d0a78b73d892e9.png",
+    "static/media/pt_interro_vert.png": "/Departments/static/media/pt_interro_vert.d299731843daeda5bbb0.png",
+    "index.html": "/Departments/index.html",
+    "main.ae45865a.css.map": "/Departments/static/css/main.ae45865a.css.map",
+    "main.99226a35.js.map": "/Departments/static/js/main.99226a35.js.map",
+    "787.327c673d.chunk.js.map": "/Departments/static/js/787.327c673d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ae45865a.css",
+    "static/js/main.99226a35.js"
+  ]
+}
