@@ -6,7 +6,7 @@ import btnHelp from "../assets/pt_interro_vert.png";
 const Header = () => {
   return (
     <div className="header">
-      <Link to="/home">
+      <Link to="/">
         <img className="header__logo" alt="Logo quiz" src={logo} />
       </Link>
 
