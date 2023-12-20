@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Departments/static/css/main.c32cff7e.css",
-    "main.js": "/Departments/static/js/main.edf4bcdb.js",
+    "main.js": "/Departments/static/js/main.50a5ce04.js",
     "static/js/787.327c673d.chunk.js": "/Departments/static/js/787.327c673d.chunk.js",
     "static/media/Quiz_logo.png": "/Departments/static/media/Quiz_logo.19f1008d49be52fed09b.png",
     "static/media/numeros.jpg": "/Departments/static/media/numeros.5cad4e9984d2993a3de1.jpg",
@@ -13,11 +13,11 @@
     "static/media/pt_interro_vert.png": "/Departments/static/media/pt_interro_vert.d299731843daeda5bbb0.png",
     "index.html": "/Departments/index.html",
     "main.c32cff7e.css.map": "/Departments/static/css/main.c32cff7e.css.map",
-    "main.edf4bcdb.js.map": "/Departments/static/js/main.edf4bcdb.js.map",
+    "main.50a5ce04.js.map": "/Departments/static/js/main.50a5ce04.js.map",
     "787.327c673d.chunk.js.map": "/Departments/static/js/787.327c673d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c32cff7e.css",
-    "static/js/main.edf4bcdb.js"
+    "static/js/main.50a5ce04.js"
   ]
 }
