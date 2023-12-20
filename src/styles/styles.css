@@ -275,6 +275,7 @@ button:hover {
 .jokes__jokeQuestion {
   font-family: "studyalone";
   margin-top: 0.5em;
+  font-size: 1.1em;
 }
 @media screen and (max-width: 768px) {
   .jokes__jokeQuestion {
@@ -301,10 +302,20 @@ button:hover {
   width: auto;
   padding: 0.5em;
 }
+.jokes__jokeAnswer {
+  font-family: "studyalone";
+  font-size: 1em;
+}
+@media screen and (max-width: 768px) {
+  .jokes__jokeAnswer {
+    margin-top: 0;
+  }
+}
 .jokes__answerContainer {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.1em;
 }
 @media screen and (max-width: 768px) {
   .jokes__answerContainer {

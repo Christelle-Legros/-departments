@@ -62,7 +62,7 @@ const QuizByName = () => {
   const strNoAccent = (a) => a.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
   const verifyWin = () => {
-    if (counterAnswers <= 7) {
+    if (counterAnswers <= 9) {
       if (
         strNoAccent(response.toUpperCase()) ==
         strNoAccent(departmentName.toUpperCase())

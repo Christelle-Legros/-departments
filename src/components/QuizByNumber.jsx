@@ -60,7 +60,7 @@ const QuizByNumber = () => {
   };
 
   const verifyWin = () => {
-    if (counterAnswers <= 7) {
+    if (counterAnswers <= 9) {
       if (response == departmentNumber) {
         setWinner(true);
         setCounterGoodAnswers(counterGoodAnswers + 1);

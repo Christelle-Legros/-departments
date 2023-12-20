@@ -5,6 +5,7 @@
   &__jokeQuestion {
     font-family: "studyalone";
     margin-top: 0.5em;
+    font-size: 1.1em;
 
     @media screen and (max-width: 768px) {
       margin-top: 0;
@@ -33,10 +34,20 @@
     padding: 0.5em;
   }
 
+  &__jokeAnswer {
+    font-family: "studyalone";
+    font-size: 1em;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 0;
+    }
+  }
+
   &__answerContainer {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.1em;
 
     @media screen and (max-width: 768px) {
       flex-direction: column;

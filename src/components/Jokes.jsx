@@ -50,7 +50,7 @@ const Jokes = () => {
               Réponse
             </button>
             {showAnswer ? (
-              <div className="jokes__jokeQuestion">{jokeAnswer}</div>
+              <div className="jokes__jokeAnswer">{jokeAnswer}</div>
             ) : (
               <div></div>
             )}
