@@ -12,7 +12,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/bynumber" element={<QuizByNumber />} />
           <Route path="/byname" element={<QuizByName />} />
           <Route path="/help" element={<Help />} />
