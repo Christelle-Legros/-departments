@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Departments/static/css/main.c32cff7e.css",
-    "main.js": "/Departments/static/js/main.50a5ce04.js",
-    "static/js/787.327c673d.chunk.js": "/Departments/static/js/787.327c673d.chunk.js",
-    "static/media/Quiz_logo.png": "/Departments/static/media/Quiz_logo.19f1008d49be52fed09b.png",
-    "static/media/numeros.jpg": "/Departments/static/media/numeros.5cad4e9984d2993a3de1.jpg",
-    "static/media/noms_departements.png": "/Departments/static/media/noms_departements.91b6a86fb192080b346a.png",
-    "static/media/StudyAlone.otf": "/Departments/static/media/StudyAlone.35fff82152143a4ebf67.otf",
-    "static/media/Milk Mango.ttf": "/Departments/static/media/Milk Mango.3c3a2bb9a3bc912c95e8.ttf",
-    "static/media/Starborn.ttf": "/Departments/static/media/Starborn.921086e813b46abea23a.ttf",
-    "static/media/croix_rouge.png": "/Departments/static/media/croix_rouge.f0be27d0a78b73d892e9.png",
-    "static/media/pt_interro_vert.png": "/Departments/static/media/pt_interro_vert.d299731843daeda5bbb0.png",
-    "index.html": "/Departments/index.html",
-    "main.c32cff7e.css.map": "/Departments/static/css/main.c32cff7e.css.map",
-    "main.50a5ce04.js.map": "/Departments/static/js/main.50a5ce04.js.map",
-    "787.327c673d.chunk.js.map": "/Departments/static/js/787.327c673d.chunk.js.map"
+    "main.css": "/departments/static/css/main.e4a6e9b0.css",
+    "main.js": "/departments/static/js/main.b542e647.js",
+    "static/js/787.327c673d.chunk.js": "/departments/static/js/787.327c673d.chunk.js",
+    "static/media/Quiz_logo.png": "/departments/static/media/Quiz_logo.19f1008d49be52fed09b.png",
+    "static/media/numeros.jpg": "/departments/static/media/numeros.5cad4e9984d2993a3de1.jpg",
+    "static/media/noms_departements.png": "/departments/static/media/noms_departements.91b6a86fb192080b346a.png",
+    "static/media/StudyAlone.otf": "/departments/static/media/StudyAlone.35fff82152143a4ebf67.otf",
+    "static/media/Milk Mango.ttf": "/departments/static/media/Milk Mango.3c3a2bb9a3bc912c95e8.ttf",
+    "static/media/Starborn.ttf": "/departments/static/media/Starborn.921086e813b46abea23a.ttf",
+    "static/media/croix_rouge.png": "/departments/static/media/croix_rouge.f0be27d0a78b73d892e9.png",
+    "static/media/pt_interro_vert.png": "/departments/static/media/pt_interro_vert.d299731843daeda5bbb0.png",
+    "index.html": "/departments/index.html",
+    "main.e4a6e9b0.css.map": "/departments/static/css/main.e4a6e9b0.css.map",
+    "main.b542e647.js.map": "/departments/static/js/main.b542e647.js.map",
+    "787.327c673d.chunk.js.map": "/departments/static/js/787.327c673d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c32cff7e.css",
-    "static/js/main.50a5ce04.js"
+    "static/css/main.e4a6e9b0.css",
+    "static/js/main.b542e647.js"
   ]
 }
