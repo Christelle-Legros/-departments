@@ -1,6 +1,6 @@
 [build]
   base = "/"
   publish = "build"
-  command = ""
+  command = "npm run build"
   functions = "functions"
   ignore_warnings = true
