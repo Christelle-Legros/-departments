@@ -1,4 +1,7 @@
 [build]
-  command = "echo 'default context'"
+  [build]
+  base = "/"
+  publish = "/"
+  command = ""
   functions = "functions"
   ignore_warnings = true
