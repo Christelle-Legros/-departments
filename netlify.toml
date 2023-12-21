@@ -1,7 +1,6 @@
 [build]
-  [build]
   base = "/"
-  publish = "build"
+  publish = "/"
   command = ""
   functions = "functions"
   ignore_warnings = true
