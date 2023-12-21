@@ -1,6 +1,6 @@
 [build]
   base = "/"
   publish = "build"
-  command = "npm run build"
+  command = "CI=false npm run build"
   functions = "functions"
   ignore_warnings = true
