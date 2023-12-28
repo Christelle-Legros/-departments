@@ -108,7 +108,7 @@ const QuizByNumber = () => {
               placeholder="2 ou 3 chiffres"
             />
 
-            {departmentName ? (
+            {departmentName && response ? (
               <button onClick={verifyWin}>Valider la réponse</button>
             ) : (
               <button disabled>Valider la réponse</button>

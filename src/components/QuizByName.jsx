@@ -89,7 +89,7 @@ const QuizByName = () => {
               required
               placeholder="mots séparés par -"
             />
-            {departmentNumber ? (
+            {departmentNumber && response ? (
               <button onClick={verifyWin}>Valider la réponse</button>
             ) : (
               <button disabled>Valider la réponse</button>
