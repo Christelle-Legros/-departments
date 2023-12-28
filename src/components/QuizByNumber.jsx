@@ -97,23 +97,25 @@ const QuizByNumber = () => {
           <div className="quizByNumber_container__departmentName">
             {departmentName}
           </div>
-          <div className="quizByNumber_container__answerContainer">
-            <input
-              type="text"
-              onChange={(e) => setResponse(e.target.value)}
-              value={response}
-              required
-              minlength="2"
-              maxlength="3"
-              placeholder="2 ou 3 chiffres"
-            />
+          <form onSubmit="{verifyWin}">
+            <div className="quizByNumber_container__answerContainer">
+              <input
+                type="text"
+                onChange={(e) => setResponse(e.target.value)}
+                value={response}
+                required
+                minlength="2"
+                maxlength="3"
+                placeholder="2 ou 3 chiffres"
+              />
 
-            {departmentName && response ? (
-              <button onClick={verifyWin}>Valider la réponse</button>
-            ) : (
-              <button disabled>Valider la réponse</button>
-            )}
-          </div>
+              {departmentName && response ? (
+                <button onClick={verifyWin}>Valider la réponse</button>
+              ) : (
+                <button disabled>Valider la réponse</button>
+              )}
+            </div>
+          </form>
           <div className="quizByNumber_container__winnerMsg">
             {winnerMessage}
           </div>

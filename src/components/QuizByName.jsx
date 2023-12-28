@@ -81,20 +81,22 @@ const QuizByName = () => {
           <div className="quizByName_container__departmentNumber">
             {departmentNumber}
           </div>
-          <div className="quizByName_container__answerContainer">
-            <input
-              type="text"
-              onChange={(e) => setResponse(e.target.value)}
-              value={response}
-              required
-              placeholder="mots séparés par -"
-            />
-            {departmentNumber && response ? (
-              <button onClick={verifyWin}>Valider la réponse</button>
-            ) : (
-              <button disabled>Valider la réponse</button>
-            )}
-          </div>
+          <form onSubmit="{verifyWin}">
+            <div className="quizByName_container__answerContainer">
+              <input
+                type="text"
+                onChange={(e) => setResponse(e.target.value)}
+                value={response}
+                required
+                placeholder="mots séparés par -"
+              />
+              {departmentNumber && response ? (
+                <button onClick={verifyWin}>Valider la réponse</button>
+              ) : (
+                <button disabled>Valider la réponse</button>
+              )}
+            </div>
+          </form>
           <div className="quizByName_container__winnerMsg">{winnerMessage}</div>
           {showModal && (
             <EndModal
