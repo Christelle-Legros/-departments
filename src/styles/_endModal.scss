@@ -15,14 +15,14 @@
   flex-direction: column;
   align-items: center;
   width: 60vw;
-  height: 40vh;
+  height: 50vh;
   box-shadow: 0 0 1em #cccccc;
   border-radius: 10px;
   font-size: 0.8em;
   z-index: 1;
   position: relative;
   top: 5em;
-  transform: translateX(30%);
+  transform: translateX(33%);
 
   &__close {
     position: relative;
@@ -49,12 +49,26 @@
 
   &__counterMsg {
     font-family: "studyalone";
-    margin-top: 1em;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
   }
 
   &__btnAccueil {
     font-size: 20px;
     position: relative;
     bottom: -55%;
+  }
+
+  &__errors {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 0.8em;
+
+    &__errors_list {
+      font-family: "studyalone";
+      font-size: 0.9em;
+      margin: 0;
+    }
   }
 }

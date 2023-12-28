@@ -22,8 +22,6 @@ const Jokes = () => {
       )
       .then((res) => setJoke(res.data))
       .then(console.log(joke));
-    //   .then(setJokeQuestion(joke.joke));
-    //   .then(setJokeAnswer(joke.answer));
   }, []);
 
   const askJoke = () => {

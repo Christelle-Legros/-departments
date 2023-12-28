@@ -14,8 +14,7 @@ const QuizByName = () => {
   const [winnerMessage, setWinnerMessage] = useState("");
   const [counterAnswers, setCounterAnswers] = useState(0);
   const [showModal, setShowModal] = useState(false);
-
-  const hideModal = () => setShowModal(false);
+  const [objectsBadAnswers, setObjectsBadAnswers] = useState([]);
 
   useEffect(() => {
     axios.get(`https://geo.api.gouv.fr/departements`).then((res) => {
@@ -24,30 +23,9 @@ const QuizByName = () => {
     });
   }, []);
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const response = await axios.get(`https://geo.api.gouv.fr/departements`);
-  //     setTab(response.data);
-  //     console.log(tab);
-  //   };
-
-  //   fetchData();
-  // }, []);
-
-  // useEffect(() => {
-  //   axios
-  //     .get("https://geo.api.gouv.fr/departements")
-  //     .then((res) => res.data)
-  //     .then((data) => setTab(data))
-  //     .then((data) => console.log(data));
-  // }, []);
-
   // sort un département de manière aléatoire
   const randomDepartment = () => {
     const randomNumber = Math.floor(Math.random() * tab.length + 1); // sort un nombre aléatoire
-
-    console.log(randomNumber);
-
     const randomValues = () => {
       setRValue(tab[randomNumber]);
       console.log(rValue);
@@ -61,8 +39,15 @@ const QuizByName = () => {
 
   const strNoAccent = (a) => a.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
+  const handleBadAnswer = (newObject) => {
+    const newBadAnswers = [...objectsBadAnswers, newObject];
+    setObjectsBadAnswers(newBadAnswers);
+    localStorage.setItem("objets", JSON.stringify(newBadAnswers));
+    console.log(localStorage.getItem("objets"));
+  };
+
   const verifyWin = () => {
-    if (counterAnswers <= 9) {
+    if (counterAnswers <= 1) {
       if (
         strNoAccent(response.toUpperCase()) ==
         strNoAccent(departmentName.toUpperCase())
@@ -79,9 +64,9 @@ const QuizByName = () => {
         setResponse(initialResponse);
         randomDepartment();
         setWinnerMessage("Perdu !");
+        handleBadAnswer({ departmentName, departmentNumber, response });
       }
     } else {
-      setWinnerMessage("Fini");
       setShowModal(true);
     }
   };
@@ -102,20 +87,19 @@ const QuizByName = () => {
               onChange={(e) => setResponse(e.target.value)}
               value={response}
               required
-              placeholder="nom avec - si besoin"
+              placeholder="mots séparés par -"
             />
             <button onClick={verifyWin}>Valider la réponse</button>{" "}
           </div>
           <div className="quizByName_container__winnerMsg">{winnerMessage}</div>
           {showModal && (
             <EndModal
-              showModal={showModal}
               setShowModal={setShowModal}
-              hideModal={hideModal}
               counterGoodAnswers={counterGoodAnswers}
+              objectsBadAnswers={objectsBadAnswers}
             />
           )}
-          {counterAnswers === 0 ? (
+          {counterAnswers == 0 ? (
             <button
               className="quizByName_container__btnStart"
               onClick={randomDepartment}
