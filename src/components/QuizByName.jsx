@@ -89,7 +89,11 @@ const QuizByName = () => {
               required
               placeholder="mots séparés par -"
             />
-            <button onClick={verifyWin}>Valider la réponse</button>{" "}
+            {departmentNumber ? (
+              <button onClick={verifyWin}>Valider la réponse</button>
+            ) : (
+              <button disabled>Valider la réponse</button>
+            )}
           </div>
           <div className="quizByName_container__winnerMsg">{winnerMessage}</div>
           {showModal && (

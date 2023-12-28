@@ -107,7 +107,12 @@ const QuizByNumber = () => {
               maxlength="3"
               placeholder="2 ou 3 chiffres"
             />
-            <button onClick={verifyWin}>Valider la réponse</button>{" "}
+
+            {departmentName ? (
+              <button onClick={verifyWin}>Valider la réponse</button>
+            ) : (
+              <button disabled>Valider la réponse</button>
+            )}
           </div>
           <div className="quizByNumber_container__winnerMsg">
             {winnerMessage}

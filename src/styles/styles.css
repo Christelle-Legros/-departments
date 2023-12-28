@@ -70,6 +70,10 @@ button:hover {
   margin: 0.7em;
   font-size: 0.7em;
 }
+.quizByNumber_container__answerContainer button:disabled:hover {
+  background-color: #f65b74;
+  border: 0;
+}
 .quizByNumber_container__btnStart {
   margin-bottom: 1.5em;
 }
@@ -129,6 +133,10 @@ button:hover {
   padding: 0.7em;
   margin: 0.7em;
   font-size: 0.7em;
+}
+.quizByName_container__answerContainer button:disabled:hover {
+  background-color: #f65b74;
+  border: 0;
 }
 .quizByName_container__btnStart {
   margin-bottom: 1.5em;

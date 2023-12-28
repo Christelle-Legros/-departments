@@ -53,6 +53,11 @@
     font-size: 0.7em;
   }
 
+  &__answerContainer button:disabled:hover {
+    background-color: #f65b74;
+    border: 0;
+  }
+
   &__btnStart {
     margin-bottom: 1.5em;
   }
