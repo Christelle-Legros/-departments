@@ -47,7 +47,7 @@ const QuizByName = () => {
   };
 
   const verifyWin = () => {
-    if (counterAnswers <= 1) {
+    if (counterAnswers <= 9) {
       if (
         strNoAccent(response.toUpperCase()) ==
         strNoAccent(departmentName.toUpperCase())
