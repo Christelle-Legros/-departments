@@ -32,12 +32,14 @@ const EndModal = ({ hideModal, counterGoodAnswers, objectsBadAnswers }) => {
 
         <div className="endModal__errors">
           Les mauvaises réponses :
-          {objectsBadAnswers.map((objet) => (
-            <p className="endModal__errors__errors_list">
-              {objet.departmentNumber} - {objet.departmentName} - Votre rép :{" "}
-              {objet.response}
-            </p>
-          ))}
+          <div className="endModal__errors__errors_list">
+            {objectsBadAnswers.map((objet) => (
+              <p className="endModal__errors__errors_list__items">
+                {objet.departmentNumber} - {objet.departmentName} | Votre rép :{" "}
+                {objet.response}
+              </p>
+            ))}
+          </div>
         </div>
         <Link to="/">
           <button className="endModal__btnAccueil" onClick={removeBadAnswers}>

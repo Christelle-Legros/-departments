@@ -32,11 +32,19 @@
   &__answerContainer {
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   &__answerContainer input {
     width: 30vw;
     font-size: 0.7em;
+
+    @media screen and (max-width: 768px) {
+      width: 38vw;
+    }
   }
 
   &__answerContainer button {

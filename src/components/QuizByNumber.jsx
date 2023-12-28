@@ -14,8 +14,7 @@ const QuizByNumber = () => {
   const [winnerMessage, setWinnerMessage] = useState("");
   const [counterAnswers, setCounterAnswers] = useState(0);
   const [showModal, setShowModal] = useState(false);
-
-  const hideModal = () => setShowModal(false);
+  const [objectsBadAnswers, setObjectsBadAnswers] = useState([]);
 
   useEffect(() => {
     axios.get(`https://geo.api.gouv.fr/departements`).then((res) => {
@@ -59,6 +58,13 @@ const QuizByNumber = () => {
     randomValues();
   };
 
+  const handleBadAnswer = (newObject) => {
+    const newBadAnswers = [...objectsBadAnswers, newObject];
+    setObjectsBadAnswers(newBadAnswers);
+    localStorage.setItem("objets", JSON.stringify(newBadAnswers));
+    console.log(localStorage.getItem("objets"));
+  };
+
   const verifyWin = () => {
     if (counterAnswers <= 9) {
       if (response == departmentNumber) {
@@ -74,9 +80,9 @@ const QuizByNumber = () => {
         setResponse(initialResponse);
         randomDepartment();
         setWinnerMessage("Perdu !");
+        handleBadAnswer({ departmentName, departmentNumber, response });
       }
     } else {
-      setWinnerMessage("Fini");
       setShowModal(true);
     }
   };
@@ -108,10 +114,9 @@ const QuizByNumber = () => {
           </div>
           {showModal && (
             <EndModal
-              showModal={showModal}
               setShowModal={setShowModal}
-              hideModal={hideModal}
               counterGoodAnswers={counterGoodAnswers}
+              objectsBadAnswers={objectsBadAnswers}
             />
           )}
           {counterAnswers === 0 ? (

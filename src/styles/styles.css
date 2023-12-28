@@ -51,9 +51,19 @@ button:hover {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .quizByNumber_container__answerContainer {
+    flex-direction: column;
+  }
+}
 .quizByNumber_container__answerContainer input {
   width: 30vw;
   font-size: 0.7em;
+}
+@media screen and (max-width: 768px) {
+  .quizByNumber_container__answerContainer input {
+    width: 38vw;
+  }
 }
 .quizByNumber_container__answerContainer button {
   padding: 0.7em;
@@ -238,7 +248,7 @@ button:hover {
   flex-direction: column;
   align-items: center;
   width: 60vw;
-  height: 50vh;
+  height: 60vh;
   box-shadow: 0 0 1em #cccccc;
   border-radius: 10px;
   font-size: 0.8em;
@@ -246,6 +256,13 @@ button:hover {
   position: relative;
   top: 5em;
   transform: translateX(33%);
+}
+@media screen and (max-width: 768px) {
+  .endModal {
+    width: 80vw;
+    height: 80vh;
+    transform: translateX(12%);
+  }
 }
 .endModal__close {
   position: relative;
@@ -275,16 +292,27 @@ button:hover {
 }
 .endModal__btnAccueil {
   font-size: 20px;
-  position: relative;
-  bottom: -55%;
+  margin-top: 1em;
 }
 .endModal__errors {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   font-size: 0.8em;
+  align-items: center;
 }
 .endModal__errors__errors_list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 2em;
+       column-gap: 2em;
+}
+@media screen and (max-width: 768px) {
+  .endModal__errors__errors_list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.endModal__errors__errors_list__items {
   font-family: "studyalone";
   font-size: 0.9em;
   margin: 0;
