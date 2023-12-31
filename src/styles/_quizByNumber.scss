@@ -8,6 +8,13 @@
   &__winnerMsg {
     font-family: "starborn";
     color: #f8cd82;
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      font-size: 0.9em;
+      margin-bottom: 1em;
+      margin-top: 0.5em;
+    }
   }
 
   &__questionTitle {

@@ -61,7 +61,7 @@ const QuizByName = () => {
         setCounterAnswers(counterAnswers + 1);
         setResponse(initialResponse);
         randomDepartment();
-        setWinnerMessage("Perdu !");
+        setWinnerMessage(`Perdu ! La reponse etait : ` + departmentName);
         handleBadAnswer({ departmentName, departmentNumber, response });
       }
     } else {

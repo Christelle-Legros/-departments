@@ -30,6 +30,14 @@ button:hover {
   font-family: "starborn";
   color: #f8cd82;
 }
+@media screen and (max-width: 768px) {
+  .quizByNumber_container__winnerMsg {
+    text-align: center;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+  }
+}
 .quizByNumber_container__questionTitle {
   margin-bottom: 0.6em;
 }
@@ -93,6 +101,14 @@ button:hover {
 .quizByName_container__winnerMsg {
   font-family: "starborn";
   color: #f8cd82;
+}
+@media screen and (max-width: 768px) {
+  .quizByName_container__winnerMsg {
+    text-align: center;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+  }
 }
 .quizByName_container__questionTitle {
   margin-bottom: 0.6em;
@@ -227,7 +243,7 @@ button:hover {
 }
 
 .help {
-  font-size: 0.5em;
+  font-size: 0.6em;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

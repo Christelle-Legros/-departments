@@ -12,6 +12,7 @@ const QuizByNumber = () => {
   const [counterGoodAnswers, setCounterGoodAnswers] = useState(0);
   const initialResponse = "";
   const [winnerMessage, setWinnerMessage] = useState("");
+  const initialWinnerMsg = "";
   const [counterAnswers, setCounterAnswers] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [objectsBadAnswers, setObjectsBadAnswers] = useState([]);
@@ -31,7 +32,7 @@ const QuizByNumber = () => {
       setDepartmentName(rValue.nom);
       setDepartmentNumber(rValue.code);
       setResponse(initialResponse);
-      setWinnerMessage(" ");
+      setWinnerMessage(initialWinnerMsg);
     };
     randomValues();
   };
@@ -61,7 +62,7 @@ const QuizByNumber = () => {
         setCounterAnswers(counterAnswers + 1);
         setResponse(initialResponse);
         randomDepartment();
-        setWinnerMessage("Perdu !");
+        setWinnerMessage(`Perdu ! La reponse etait : ` + departmentNumber);
         handleBadAnswer({ departmentName, departmentNumber, response });
       }
     } else {
@@ -99,9 +100,11 @@ const QuizByNumber = () => {
               )}
             </div>
           </form>
+
           <div className="quizByNumber_container__winnerMsg">
             {winnerMessage}
           </div>
+
           {showModal && (
             <EndModal
               setShowModal={setShowModal}
