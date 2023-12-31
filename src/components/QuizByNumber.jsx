@@ -19,37 +19,15 @@ const QuizByNumber = () => {
   useEffect(() => {
     axios.get(`https://geo.api.gouv.fr/departements`).then((res) => {
       setTab(res.data);
-      console.log(tab);
     });
   }, []);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const response = await axios.get(`https://geo.api.gouv.fr/departements`);
-  //     setTab(response.data);
-  //     console.log(tab);
-  //   };
-
-  //   fetchData();
-  // }, []);
-
-  // useEffect(() => {
-  //   axios
-  //     .get("https://geo.api.gouv.fr/departements")
-  //     .then((res) => res.data)
-  //     .then((data) => setTab(data))
-  //     .then((data) => console.log(data));
-  // }, []);
 
   // sort un département de manière aléatoire
   const randomDepartment = () => {
     const randomNumber = Math.floor(Math.random() * tab.length + 1); // sort un nombre aléatoire
 
-    console.log(randomNumber);
-
     const randomValues = () => {
       setRValue(tab[randomNumber]);
-      console.log(rValue);
       setDepartmentName(rValue.nom);
       setDepartmentNumber(rValue.code);
       setResponse(initialResponse);
@@ -58,14 +36,18 @@ const QuizByNumber = () => {
     randomValues();
   };
 
+  // faire une boucle dans laquelle on sort un nombre aléatoire, et on le rajoute à un tableau de nb s'il n'y est pas déjà
+  // récupérer les valeurs correspondantes dans le tableau des départements
+  // a chaque appui sur le bouton, la valeur suivante est sélectionnée grace a setDepartmentName & setDepartmentNumber
+
   const handleBadAnswer = (newObject) => {
     const newBadAnswers = [...objectsBadAnswers, newObject];
     setObjectsBadAnswers(newBadAnswers);
     localStorage.setItem("objets", JSON.stringify(newBadAnswers));
-    console.log(localStorage.getItem("objets"));
   };
 
-  const verifyWin = () => {
+  const verifyWin = (e) => {
+    e.preventDefault();
     if (counterAnswers <= 9) {
       if (response == departmentNumber) {
         setWinner(true);
@@ -97,20 +79,21 @@ const QuizByNumber = () => {
           <div className="quizByNumber_container__departmentName">
             {departmentName}
           </div>
-          <form onSubmit="{verifyWin}">
+          <form>
             <div className="quizByNumber_container__answerContainer">
               <input
                 type="text"
                 onChange={(e) => setResponse(e.target.value)}
                 value={response}
                 required
-                minlength="2"
-                maxlength="3"
+                maxLength="3"
                 placeholder="2 ou 3 chiffres"
               />
 
               {departmentName && response ? (
-                <button onClick={verifyWin}>Valider la réponse</button>
+                <button type="submit" onClick={verifyWin}>
+                  Valider la réponse
+                </button>
               ) : (
                 <button disabled>Valider la réponse</button>
               )}

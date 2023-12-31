@@ -19,7 +19,6 @@ const QuizByName = () => {
   useEffect(() => {
     axios.get(`https://geo.api.gouv.fr/departements`).then((res) => {
       setTab(res.data);
-      console.log(tab);
     });
   }, []);
 
@@ -28,7 +27,6 @@ const QuizByName = () => {
     const randomNumber = Math.floor(Math.random() * tab.length + 1); // sort un nombre aléatoire
     const randomValues = () => {
       setRValue(tab[randomNumber]);
-      console.log(rValue);
       setDepartmentName(rValue.nom);
       setDepartmentNumber(rValue.code);
       setResponse(initialResponse);
@@ -43,10 +41,10 @@ const QuizByName = () => {
     const newBadAnswers = [...objectsBadAnswers, newObject];
     setObjectsBadAnswers(newBadAnswers);
     localStorage.setItem("objets", JSON.stringify(newBadAnswers));
-    console.log(localStorage.getItem("objets"));
   };
 
-  const verifyWin = () => {
+  const verifyWin = (e) => {
+    e.preventDefault();
     if (counterAnswers <= 9) {
       if (
         strNoAccent(response.toUpperCase()) ==
@@ -81,7 +79,7 @@ const QuizByName = () => {
           <div className="quizByName_container__departmentNumber">
             {departmentNumber}
           </div>
-          <form onSubmit="{verifyWin}">
+          <form>
             <div className="quizByName_container__answerContainer">
               <input
                 type="text"

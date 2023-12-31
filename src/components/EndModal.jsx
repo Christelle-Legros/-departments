@@ -2,9 +2,10 @@ import React, { useEffect } from "react";
 import closeImg from "../assets/croix_rouge.png";
 import { Link } from "react-router-dom";
 
-const EndModal = ({ hideModal, counterGoodAnswers, objectsBadAnswers }) => {
+const EndModal = ({ setShowModal, counterGoodAnswers, objectsBadAnswers }) => {
   const removeBadAnswers = () => {
     localStorage.clear();
+    setShowModal(false);
   };
 
   return (
@@ -34,7 +35,10 @@ const EndModal = ({ hideModal, counterGoodAnswers, objectsBadAnswers }) => {
           Les mauvaises réponses :
           <div className="endModal__errors__errors_list">
             {objectsBadAnswers.map((objet) => (
-              <p className="endModal__errors__errors_list__items">
+              <p
+                className="endModal__errors__errors_list__items"
+                key={objet.departmentNumber}
+              >
                 {objet.departmentNumber} - {objet.departmentName} | Votre rép :{" "}
                 {objet.response}
               </p>
