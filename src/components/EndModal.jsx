@@ -2,10 +2,19 @@ import React, { useEffect } from "react";
 import closeImg from "../assets/croix_rouge.png";
 import { Link } from "react-router-dom";
 
-const EndModal = ({ setShowModal, counterGoodAnswers, objectsBadAnswers }) => {
-  const removeBadAnswers = () => {
+const EndModal = ({
+  setShowModal,
+  counterGoodAnswers,
+  objectsBadAnswers,
+  handleReset,
+  time,
+  formatTime,
+}) => {
+  const endGame = () => {
     localStorage.clear();
     setShowModal(false);
+
+    handleReset();
   };
 
   return (
@@ -13,7 +22,7 @@ const EndModal = ({ setShowModal, counterGoodAnswers, objectsBadAnswers }) => {
       className="endModalBackground"
       role="button"
       aria-hidden="true"
-      onClick={removeBadAnswers}
+      onClick={endGame}
     >
       <div className="endModal">
         <div className="endModal__close">
@@ -21,14 +30,16 @@ const EndModal = ({ setShowModal, counterGoodAnswers, objectsBadAnswers }) => {
             <img
               src={closeImg}
               alt="Croix de fermeture fenêtre"
-              onClick={removeBadAnswers}
+              onClick={endGame}
             />
           </Link>
         </div>
 
         <div className="endModal__msg">Partie terminée ! </div>
         <div className="endModal__counterMsg">
-          Votre score est de {counterGoodAnswers} sur 10
+          Votre score est de{" "}
+          <span id="nbGoodAnswers">{counterGoodAnswers} sur 10</span> en{" "}
+          <span id="timeGame">{formatTime(time)}</span>
         </div>
 
         <div className="endModal__errors">
@@ -46,7 +57,7 @@ const EndModal = ({ setShowModal, counterGoodAnswers, objectsBadAnswers }) => {
           </div>
         </div>
         <Link to="/">
-          <button className="endModal__btnAccueil" onClick={removeBadAnswers}>
+          <button className="endModal__btnAccueil" onClick={endGame}>
             Accueil
           </button>
         </Link>

@@ -201,6 +201,9 @@ const QuizByNumber = () => {
               setShowModal={setShowModal}
               counterGoodAnswers={counterGoodAnswers}
               objectsBadAnswers={objectsBadAnswers}
+              handleReset={handleReset}
+              time={time}
+              formatTime={formatTime}
             />
           )}
           {started === false ? (

@@ -355,6 +355,16 @@ button:hover {
   font-size: 0.9em;
   margin: 0;
 }
+.endModal #nbGoodAnswers {
+  font-family: "studyalone";
+  font-weight: bold;
+  text-decoration: underline;
+}
+.endModal #timeGame {
+  font-family: "studyalone";
+  font-weight: bold;
+  color: #f65b74;
+}
 
 .jokes {
   display: flex;
