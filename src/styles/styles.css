@@ -54,6 +54,10 @@ button:hover {
   border: 1px solid;
   background-color: #f8cd82;
   margin-top: 2em;
+  text-align: center;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .quizByNumber_container__answerContainer {
   display: flex;
@@ -70,7 +74,7 @@ button:hover {
 }
 @media screen and (max-width: 768px) {
   .quizByNumber_container__answerContainer input {
-    width: 38vw;
+    width: auto;
   }
 }
 .quizByNumber_container__answerContainer button {
@@ -314,6 +318,11 @@ button:hover {
   width: 2vw;
   height: auto;
 }
+@media screen and (max-width: 768px) {
+  .endModal__close img {
+    width: 5vw;
+  }
+}
 .endModal__msg {
   margin-top: 0.6em;
   font-size: 1.5em;
@@ -321,12 +330,15 @@ button:hover {
 @media screen and (max-width: 768px) {
   .endModal__msg {
     text-align: center;
+    font-size: 1.3em;
+    max-width: 80%;
   }
 }
 .endModal__counterMsg {
   font-family: "studyalone";
   margin-top: 0.2em;
   margin-bottom: 0.4em;
+  text-align: center;
 }
 .endModal__btnAccueil {
   font-size: 20px;
@@ -337,6 +349,7 @@ button:hover {
   flex-direction: column;
   font-size: 0.8em;
   align-items: center;
+  margin-top: 1em;
 }
 .endModal__errors__errors_list {
   display: grid;

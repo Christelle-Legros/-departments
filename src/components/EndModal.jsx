@@ -35,11 +35,12 @@ const EndModal = ({
           </Link>
         </div>
 
-        <div className="endModal__msg">Partie terminée ! </div>
+        <div className="endModal__msg">The End ! </div>
         <div className="endModal__counterMsg">
           Votre score est de{" "}
-          <span id="nbGoodAnswers">{counterGoodAnswers} sur 10</span> en{" "}
-          <span id="timeGame">{formatTime(time)}</span>
+          <span id="nbGoodAnswers">{counterGoodAnswers} sur 10</span>
+          <br />
+          en <span id="timeGame">{formatTime(time)}</span>
         </div>
 
         <div className="endModal__errors">
