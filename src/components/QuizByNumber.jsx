@@ -45,7 +45,7 @@ const QuizByNumber = () => {
   // random2 - faire une boucle dans laquelle on sort un nombre aléatoire, et on le rajoute à un tableau de nb s'il n'y est pas déjà
   const extractNumbersRandom = () => {
     while (tabRandomNr.length < 10) {
-      const randomNumber2 = Math.floor(Math.random() * tab.length); // génère un nombre aléatoire entre 0 et 101
+      const randomNumber2 = Math.floor(Math.random() * tab.length + 1); // génère un nombre aléatoire entre 0 et 101
       if (!tabRandomNr.includes(randomNumber2)) {
         console.log(randomNumber2);
         tabRandomNr.push(randomNumber2);
@@ -137,7 +137,7 @@ const QuizByNumber = () => {
 
   const verifyWin = (e) => {
     e.preventDefault();
-    if (counterAnswers <= 9) {
+    if (counterAnswers <= 8) {
       if (response == departmentNumber) {
         setWinner(true);
         setCounterGoodAnswers(counterGoodAnswers + 1);
@@ -156,8 +156,21 @@ const QuizByNumber = () => {
         handleBadAnswer({ departmentName, departmentNumber, response });
       }
     } else {
-      handleStop();
-      setShowModal(true);
+      if (response == departmentNumber) {
+        handleStop();
+        setShowModal(true);
+        setWinner(true);
+        setCounterAnswers(counterAnswers + 1);
+        setWinnerMessage("Bravo !");
+        setCounterGoodAnswers(counterGoodAnswers + 1);
+      } else {
+        handleStop();
+        setShowModal(true);
+        setWinner(false);
+        setCounterAnswers(counterAnswers + 1);
+        setWinnerMessage(`Perdu ! La reponse etait : ` + departmentNumber);
+        handleBadAnswer({ departmentName, departmentNumber, response });
+      }
     }
   };
 

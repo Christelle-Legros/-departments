@@ -138,7 +138,7 @@ const QuizByName = () => {
 
   const verifyWin = (e) => {
     e.preventDefault();
-    if (counterAnswers <= 9) {
+    if (counterAnswers <= 8) {
       if (
         strNoAccent(response.toUpperCase()) ==
         strNoAccent(departmentName.toUpperCase())
@@ -160,8 +160,21 @@ const QuizByName = () => {
         handleBadAnswer({ departmentName, departmentNumber, response });
       }
     } else {
-      handleStop();
-      setShowModal(true);
+      if (response == departmentNumber) {
+        handleStop();
+        setShowModal(true);
+        setWinner(true);
+        setCounterAnswers(counterAnswers + 1);
+        setWinnerMessage("Bravo !");
+        setCounterGoodAnswers(counterGoodAnswers + 1);
+      } else {
+        handleStop();
+        setShowModal(true);
+        setWinner(false);
+        setCounterAnswers(counterAnswers + 1);
+        setWinnerMessage(`Perdu ! La reponse etait : ` + departmentName);
+        handleBadAnswer({ departmentName, departmentNumber, response });
+      }
     }
   };
 
