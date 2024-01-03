@@ -85,10 +85,17 @@ button:hover {
 .quizByNumber_container__btnStart {
   margin-bottom: 1.5em;
 }
-.quizByNumber_container__btnStartDisabled {
-  margin-bottom: 1.5em;
-  background-color: #23b0bd;
-  border: 1px white solid;
+.quizByNumber_container__timer {
+  font-family: "studyalone";
+  color: #23b0bd;
+  background-color: #ffffe0;
+  border-radius: 50%;
+  font-size: 0.7em;
+  font-weight: bold;
+  width: 55px;
+  padding: 0.8em;
+  text-align: center;
+  margin-top: 1em;
 }
 
 .quizByName_container {
@@ -157,10 +164,17 @@ button:hover {
 .quizByName_container__btnStart {
   margin-bottom: 1.5em;
 }
-.quizByName_container__btnStartDisabled {
-  margin-bottom: 1.5em;
-  background-color: #23b0bd;
-  border: 1px white solid;
+.quizByName_container__timer {
+  font-family: "studyalone";
+  color: #23b0bd;
+  background-color: #ffffe0;
+  border-radius: 50%;
+  font-size: 0.7em;
+  font-weight: bold;
+  width: 55px;
+  padding: 0.8em;
+  text-align: center;
+  margin-top: 1em;
 }
 
 @font-face {
