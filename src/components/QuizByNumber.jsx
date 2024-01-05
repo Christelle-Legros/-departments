@@ -21,6 +21,7 @@ const QuizByNumber = () => {
   const [time, setTime] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
   const [started, setStarted] = useState(false);
+  const [randomElements, setRandomElements] = useState([]); // tab qui contient 10 éléments mélangés du tab de départ (random)
 
   useEffect(() => {
     axios.get(`https://geo.api.gouv.fr/departements`).then((res) => {
@@ -28,54 +29,37 @@ const QuizByNumber = () => {
     });
   }, []);
 
-  // random1 - sort un département de manière aléatoire
-  // const randomDepartment = () => {
-  //   const randomNumber = Math.floor(Math.random() * tab.length + 1); // sort un nombre aléatoire
-
-  //   const randomValues = () => {
-  //     setRValue(tab[randomNumber]);
-  //     setDepartmentName(rValue.nom);
-  //     setDepartmentNumber(rValue.code);
-  //     setResponse(initialResponse);
-  //     setWinnerMessage(initialWinnerMsg);
-  //   };
-  //   randomValues();
-  // };
-
-  // random2 - faire une boucle dans laquelle on sort un nombre aléatoire, et on le rajoute à un tableau de nb s'il n'y est pas déjà
-  const extractNumbersRandom = () => {
-    while (tabRandomNr.length < 10) {
-      const randomNumber2 = Math.floor(Math.random() * tab.length + 1); // génère un nombre aléatoire entre 0 et 101
-      if (!tabRandomNr.includes(randomNumber2)) {
-        console.log(randomNumber2);
-        tabRandomNr.push(randomNumber2);
-        // tabRandomNr = [...tabRandomNr, randomNumber2]; //ajoute le nb au tableau de nombres
-      }
-      console.log(tabRandomNr);
+  // random du tableau entier récupéré
+  const shuffleArray = (array) => {
+    // Algorithme de mélange de Fisher-Yates pour mélanger le tableau
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
     }
+    return array;
   };
 
-  // extraire les nombres un par un
-  const randomDepartment2 = () => {
-    console.log(tabRandomNr);
-    if (currentIndex < tabRandomNr.length) {
-      currentNumber = tabRandomNr[currentIndex];
-      setCurrentIndex(currentIndex + 1);
-      console.log(currentIndex);
-      console.log("Chiffre extrait :", currentNumber); // À remplacer par l'action souhaitée avec le chiffre
-    } else {
-      console.log("Tous les chiffres extraits");
-      console.log(currentIndex);
-      console.log(tabRandomNr);
-    }
-
-    // récupérer les valeurs correspondantes dans le tableau des départements
-    // a chaque appui sur le bouton, la valeur suivante est sélectionnée grace a setDepartmentName & setDepartmentNumber
-    const selectDepartmentToFind = () => {
-      setDepartmentName(tab[currentNumber].nom);
-      setDepartmentNumber(tab[currentNumber].code);
+  useEffect(() => {
+    const selectRandom = () => {
+      const shuffledArray = shuffleArray([...tab]); // Copie mélangée du tableau initial
+      const selectedElements = shuffledArray.slice(0, 10); // Sélectionne les 10 premiers éléments mélangés
+      setRandomElements(selectedElements);
+      console.log(randomElements);
     };
-    selectDepartmentToFind();
+    selectRandom();
+  }, [tab]);
+
+  const handleNext = () => {
+    if (currentIndex < randomElements.length) {
+      const currentObject = randomElements[currentIndex];
+      setCurrentIndex(currentIndex + 1);
+      console.log("Objet extrait :", currentObject);
+      setDepartmentName(currentObject.nom);
+      setDepartmentNumber(currentObject.code);
+    } else {
+      console.log("Tous les objets ont été extraits.");
+      // Ajouter ici une action pour indiquer que tous les objets ont été extraits
+    }
   };
 
   // timer
@@ -93,7 +77,7 @@ const QuizByNumber = () => {
     return () => clearInterval(timer);
   }, [isRunning]);
 
-  // formater le temps initialement en secondes
+  // formater le temps donné initialement en secondes
   const formatTime = (timeInSeconds) => {
     // const hours = Math.floor(timeInSeconds / 3600);
     const minutes = Math.floor((timeInSeconds % 3600) / 60);
@@ -124,8 +108,7 @@ const QuizByNumber = () => {
 
   const startPartie = () => {
     setStarted(true);
-    extractNumbersRandom();
-    randomDepartment2();
+    handleNext();
     handleStart();
   };
 
@@ -143,15 +126,13 @@ const QuizByNumber = () => {
         setCounterGoodAnswers(counterGoodAnswers + 1);
         setCounterAnswers(counterAnswers + 1);
         setResponse(initialResponse);
-        extractNumbersRandom();
-        randomDepartment2();
+        handleNext();
         setWinnerMessage("Bravo !");
       } else {
         setWinner(false);
         setCounterAnswers(counterAnswers + 1);
         setResponse(initialResponse);
-        extractNumbersRandom();
-        randomDepartment2();
+        handleNext();
         setWinnerMessage(`Perdu ! La reponse etait : ` + departmentNumber);
         handleBadAnswer({ departmentName, departmentNumber, response });
       }
