@@ -23,7 +23,6 @@ const QuizByName = () => {
   useEffect(() => {
     axios.get(`https://geo.api.gouv.fr/departements`).then((res) => {
       setTab(res.data);
-      console.log(tab);
     });
   }, []);
 
@@ -42,7 +41,6 @@ const QuizByName = () => {
       const shuffledArray = shuffleArray([...tab]); // Copie mélangée du tableau initial
       const selectedElements = shuffledArray.slice(0, 10); // Sélectionne les 10 premiers éléments mélangés
       setRandomElements(selectedElements);
-      console.log(randomElements);
     };
     selectRandom();
   }, [tab]);
@@ -51,7 +49,6 @@ const QuizByName = () => {
     if (currentIndex < randomElements.length) {
       const currentObject = randomElements[currentIndex];
       setCurrentIndex(currentIndex + 1);
-      console.log("Objet extrait :", currentObject);
       setDepartmentName(currentObject.nom);
       setDepartmentNumber(currentObject.code);
     } else {

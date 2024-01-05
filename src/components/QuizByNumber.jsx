@@ -6,7 +6,6 @@ const QuizByNumber = () => {
   const [tab, setTab] = useState([]); // recupère le premier tableau de l'appel api
   const [departmentName, setDepartmentName] = useState(); // nom du département sélectionné
   const [departmentNumber, setDepartmentNumber] = useState(); // code du département sélectionné
-  // const [rValue, setRValue] = useState({}); // objet sélectionné du tableau
   const [response, setResponse] = useState("");
   const [winner, setWinner] = useState();
   const [counterGoodAnswers, setCounterGoodAnswers] = useState(0);
@@ -15,9 +14,7 @@ const QuizByNumber = () => {
   const [counterAnswers, setCounterAnswers] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [objectsBadAnswers, setObjectsBadAnswers] = useState([]);
-  let tabRandomNr = [];
   const [currentIndex, setCurrentIndex] = useState(0);
-  let currentNumber = 0;
   const [time, setTime] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
   const [started, setStarted] = useState(false);
@@ -44,7 +41,6 @@ const QuizByNumber = () => {
       const shuffledArray = shuffleArray([...tab]); // Copie mélangée du tableau initial
       const selectedElements = shuffledArray.slice(0, 10); // Sélectionne les 10 premiers éléments mélangés
       setRandomElements(selectedElements);
-      console.log(randomElements);
     };
     selectRandom();
   }, [tab]);
@@ -53,7 +49,6 @@ const QuizByNumber = () => {
     if (currentIndex < randomElements.length) {
       const currentObject = randomElements[currentIndex];
       setCurrentIndex(currentIndex + 1);
-      console.log("Objet extrait :", currentObject);
       setDepartmentName(currentObject.nom);
       setDepartmentNumber(currentObject.code);
     } else {
