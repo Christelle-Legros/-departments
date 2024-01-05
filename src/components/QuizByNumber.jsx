@@ -137,6 +137,7 @@ const QuizByNumber = () => {
         setShowModal(true);
         setWinner(true);
         setCounterAnswers(counterAnswers + 1);
+        setResponse(initialResponse);
         setWinnerMessage("Bravo !");
         setCounterGoodAnswers(counterGoodAnswers + 1);
       } else {
@@ -144,6 +145,7 @@ const QuizByNumber = () => {
         setShowModal(true);
         setWinner(false);
         setCounterAnswers(counterAnswers + 1);
+        setResponse(initialResponse);
         setWinnerMessage(`Perdu ! La reponse etait : ` + departmentNumber);
         handleBadAnswer({ departmentName, departmentNumber, response });
       }
