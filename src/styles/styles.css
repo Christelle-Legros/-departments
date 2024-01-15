@@ -218,6 +218,26 @@ button:hover {
   top: 10px;
   right: 20px;
 }
+.header__scoresBtn {
+  position: fixed;
+  top: 75px;
+  right: 15px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 0.7em;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+  border-radius: 14px;
+  padding: 0.5em;
+  color: #23b0bd;
+  background-color: white;
+}
+.header__scoresBtn:hover {
+  background-color: #23b0bd;
+  border: 1px white solid;
+  transition: 0.2s ease-in-out;
+  color: black;
+}
 
 .homeContainer {
   display: flex;
@@ -308,7 +328,7 @@ button:hover {
   font-size: 0.8em;
   z-index: 1;
   position: relative;
-  top: 5em;
+  top: 3em;
   transform: translateX(33%);
 }
 @media screen and (max-width: 768px) {
@@ -316,6 +336,7 @@ button:hover {
     width: 80vw;
     height: 80vh;
     transform: translateX(12%);
+    top: 2em;
   }
 }
 .endModal__close {
@@ -355,6 +376,8 @@ button:hover {
 .endModal__btnAccueil {
   font-size: 20px;
   margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
 }
 .endModal__errors {
   display: flex;
@@ -379,6 +402,36 @@ button:hover {
   font-family: "studyalone";
   font-size: 0.9em;
   margin: 0;
+}
+.endModal__btnBottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.7em;
+}
+.endModal__btnBottom-save {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "studyalone";
+}
+.endModal__btnBottom-save p {
+  font-size: 0.7em;
+  font-family: "studyalone";
+  font-weight: bold;
+}
+.endModal__btnBottom-save input {
+  width: 20vw;
+  height: 2.3em;
+  margin-left: 0.8em;
+  margin-right: 0.8em;
+  font-size: 0.7em;
+}
+.endModal__btnBottom-save button {
+  max-width: 18vw;
+  font-size: 15px;
 }
 .endModal #nbGoodAnswers {
   font-family: "studyalone";
@@ -444,4 +497,39 @@ button:hover {
   .jokes__answerContainer {
     flex-direction: column;
   }
+}
+
+.loginform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.loginform__errormsg {
+  color: red;
+  font-family: "studyalone";
+}
+
+.loginform input {
+  width: 30vw;
+}
+
+.scores {
+  font-size: 0.7em;
+  display: flex;
+  justify-content: space-around;
+  max-width: 95%;
+}
+.scores__list {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid black;
+  padding-left: 0.5em;
+}
+
+.scores li {
+  font-family: "studyalone";
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,6 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import closeImg from "../assets/croix_rouge.png";
 import { Link } from "react-router-dom";
+// import { auth } from "./firebase"; // Chemin vers ton fichier firebase.js
+import { db } from "./firebase"; // Importe l'instance de Firestore
+import { ref, push } from "firebase/database";
 
 const EndModal = ({
   setShowModal,
@@ -9,7 +12,10 @@ const EndModal = ({
   handleReset,
   time,
   formatTime,
+  typeGame,
 }) => {
+  const [userName, setUserName] = useState("");
+
   const endGame = () => {
     localStorage.clear();
     setShowModal(false);
@@ -17,12 +23,29 @@ const EndModal = ({
     handleReset();
   };
 
+  const scoresRef = ref(db, "scores");
+
+  const enregistrerScore = (nom, score, temps, typeGame) => {
+    push(scoresRef, {
+      nom,
+      score,
+      temps,
+      typeGame,
+    });
+  };
+
+  const handleInputClick = (e) => {
+    e.stopPropagation();
+  };
+
   return (
     <div
       className="endModalBackground"
       role="button"
       aria-hidden="true"
-      onClick={endGame}
+      onClick={(e) =>
+        e.target.classList.contains("endModalBackground") && endGame()
+      }
     >
       <div className="endModal">
         <div className="endModal__close">
@@ -57,11 +80,40 @@ const EndModal = ({
             ))}
           </div>
         </div>
-        <Link to="/">
-          <button className="endModal__btnAccueil" onClick={endGame}>
-            Accueil
-          </button>
-        </Link>
+
+        <div className="endModal__btnBottom">
+          <div className="endModal__btnBottom-save">
+            <p>Sauvegarder le score</p>
+            <input
+              type="text"
+              value={userName}
+              onChange={(e) => setUserName(e.target.value)}
+              onClick={handleInputClick}
+              placeholder="Votre nom"
+            />
+
+            <Link to="/classement">
+              <button
+                onClick={() =>
+                  enregistrerScore(
+                    userName.toUpperCase(),
+                    counterGoodAnswers,
+                    formatTime(time),
+                    typeGame
+                  )
+                }
+              >
+                Enregistrer
+              </button>
+            </Link>
+          </div>
+
+          <Link to="/">
+            <button className="endModal__btnAccueil" onClick={endGame}>
+              Accueil
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

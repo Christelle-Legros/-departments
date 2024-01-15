@@ -12,4 +12,26 @@
     top: 10px;
     right: 20px;
   }
+
+  &__scoresBtn {
+    position: fixed;
+    top: 75px;
+    right: 15px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 0.7em;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    border-radius: 14px;
+    padding: 0.5em;
+    color: #23b0bd;
+    background-color: white;
+  }
+
+  &__scoresBtn:hover {
+    background-color: #23b0bd;
+    border: 1px white solid;
+    transition: 0.2s ease-in-out;
+    color: black;
+  }
 }

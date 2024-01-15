@@ -10,6 +10,10 @@ const Header = () => {
         <img className="header__logo" alt="Logo quiz" src={logo} />
       </Link>
 
+      <Link to="/classement">
+        <div className="header__scoresBtn">Classements</div>
+      </Link>
+
       <Link to="/help">
         <img
           className="header__ptInterro"

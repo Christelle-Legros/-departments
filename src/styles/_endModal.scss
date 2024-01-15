@@ -21,13 +21,14 @@
   font-size: 0.8em;
   z-index: 1;
   position: relative;
-  top: 5em;
+  top: 3em;
   transform: translateX(33%);
 
   @media screen and (max-width: 768px) {
     width: 80vw;
     height: 80vh;
     transform: translateX(12%);
+    top: 2em;
   }
 
   &__close {
@@ -69,6 +70,8 @@
   &__btnAccueil {
     font-size: 20px;
     margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__errors {
@@ -95,6 +98,42 @@
       }
     }
   }
+
+  &__btnBottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.7em;
+  }
+
+  &__btnBottom-save {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "studyalone";
+  }
+
+  &__btnBottom-save p {
+    font-size: 0.7em;
+    font-family: "studyalone";
+    font-weight: bold;
+  }
+
+  &__btnBottom-save input {
+    width: 20vw;
+    height: 2.3em;
+    margin-left: 0.8em;
+    margin-right: 0.8em;
+    font-size: 0.7em;
+  }
+
+  &__btnBottom-save button {
+    max-width: 18vw;
+    font-size: 15px;
+  }
+
   #nbGoodAnswers {
     font-family: "studyalone";
     font-weight: bold;

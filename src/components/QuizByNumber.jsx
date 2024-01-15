@@ -19,6 +19,7 @@ const QuizByNumber = () => {
   const [isRunning, setIsRunning] = useState(false);
   const [started, setStarted] = useState(false);
   const [randomElements, setRandomElements] = useState([]); // tab qui contient 10 éléments mélangés du tab de départ (random)
+  const typeGame = "number";
 
   useEffect(() => {
     axios.get(`https://geo.api.gouv.fr/departements`).then((res) => {
@@ -195,6 +196,7 @@ const QuizByNumber = () => {
               handleReset={handleReset}
               time={time}
               formatTime={formatTime}
+              typeGame={typeGame}
             />
           )}
           {started === false ? (

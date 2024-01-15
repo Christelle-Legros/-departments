@@ -19,6 +19,7 @@ const QuizByName = () => {
   const [isRunning, setIsRunning] = useState(false);
   const [started, setStarted] = useState(false);
   const [randomElements, setRandomElements] = useState([]); // tab qui contient 10 éléments mélangés du tab de départ (random)
+  const typeGame = "name";
 
   useEffect(() => {
     axios.get(`https://geo.api.gouv.fr/departements`).then((res) => {
@@ -137,7 +138,10 @@ const QuizByName = () => {
         handleBadAnswer({ departmentName, departmentNumber, response });
       }
     } else {
-      if (response == departmentNumber) {
+      if (
+        strNoAccent(response.toUpperCase()) ==
+        strNoAccent(departmentName.toUpperCase())
+      ) {
         handleStop();
         setShowModal(true);
         setWinner(true);
@@ -192,6 +196,7 @@ const QuizByName = () => {
               handleReset={handleReset}
               time={time}
               formatTime={formatTime}
+              typeGame={typeGame}
             />
           )}
           {started === false ? (

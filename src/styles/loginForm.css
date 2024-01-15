@@ -1,0 +1,14 @@
+.loginform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.loginform__errormsg {
+  color: red;
+  font-family: "studyalone";
+}
+
+.loginform input {
+  width: 30vw;
+}/*# sourceMappingURL=loginForm.css.map */

@@ -1,0 +1,20 @@
+.scores {
+  font-size: 0.7em;
+  display: flex;
+  justify-content: space-around;
+  max-width: 95%;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid black;
+    padding-left: 0.5em;
+  }
+}
+
+.scores li {
+  font-family: "studyalone";
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
