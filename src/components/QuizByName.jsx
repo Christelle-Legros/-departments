@@ -108,7 +108,11 @@ const QuizByName = () => {
     handleNext();
   };
 
-  const strNoAccent = (a) => a.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  const strNoAccent = (a) =>
+    a
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/-/g, " ");
 
   const handleBadAnswer = (newObject) => {
     const newBadAnswers = [...objectsBadAnswers, newObject];
@@ -178,7 +182,7 @@ const QuizByName = () => {
                 onChange={(e) => setResponse(e.target.value)}
                 value={response}
                 required
-                placeholder="mots séparés par -"
+                placeholder="nom département"
               />
               {departmentNumber && response ? (
                 <button onClick={verifyWin}>Valider la réponse</button>
