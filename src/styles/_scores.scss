@@ -4,6 +4,10 @@
   justify-content: space-around;
   max-width: 95%;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
@@ -17,4 +21,8 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.8em;
+  }
 }

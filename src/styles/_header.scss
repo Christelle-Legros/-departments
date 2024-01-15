@@ -26,6 +26,14 @@
     padding: 0.5em;
     color: #23b0bd;
     background-color: white;
+
+    @media screen and (max-width: 768px) {
+      writing-mode: horizontal-tb;
+      bottom: 10px;
+      top: initial;
+      right: initial;
+      left: 29%;
+    }
   }
 
   &__scoresBtn:hover {

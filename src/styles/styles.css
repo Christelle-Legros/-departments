@@ -232,6 +232,15 @@ button:hover {
   color: #23b0bd;
   background-color: white;
 }
+@media screen and (max-width: 768px) {
+  .header__scoresBtn {
+    writing-mode: horizontal-tb;
+    bottom: 10px;
+    top: initial;
+    right: initial;
+    left: 29%;
+  }
+}
 .header__scoresBtn:hover {
   background-color: #23b0bd;
   border: 1px white solid;
@@ -520,6 +529,11 @@ button:hover {
   justify-content: space-around;
   max-width: 95%;
 }
+@media screen and (max-width: 768px) {
+  .scores {
+    flex-direction: column;
+  }
+}
 .scores__list {
   display: flex;
   flex-direction: column;
@@ -532,4 +546,9 @@ button:hover {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+  .scores li {
+    font-size: 0.8em;
+  }
 }/*# sourceMappingURL=styles.css.map */
