@@ -448,11 +448,6 @@ button:hover {
     flex-direction: column;
   }
 }
-.endModal__btnBottom-save p {
-  font-size: 0.7em;
-  font-family: "studyalone";
-  font-weight: bold;
-}
 .endModal__btnBottom-save input {
   width: 20vw;
   height: 2.3em;
@@ -462,7 +457,7 @@ button:hover {
 }
 @media screen and (max-width: 768px) {
   .endModal__btnBottom-save input {
-    width: 40vw;
+    width: 45vw;
   }
 }
 .endModal__btnBottom-save button {
@@ -471,7 +466,7 @@ button:hover {
 }
 @media screen and (max-width: 768px) {
   .endModal__btnBottom-save button {
-    max-width: 35vw;
+    max-width: 40vw;
   }
 }
 .endModal #nbGoodAnswers {

@@ -83,7 +83,6 @@ const EndModal = ({
 
         <div className="endModal__btnBottom">
           <div className="endModal__btnBottom-save">
-            <p>Sauvegarder le score</p>
             <input
               type="text"
               value={userName}
@@ -103,7 +102,7 @@ const EndModal = ({
                   )
                 }
               >
-                Enregistrer
+                Save le score
               </button>
             </Link>
           </div>
