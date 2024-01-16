@@ -2,6 +2,11 @@
   display: flex;
   justify-content: center;
 
+  @media screen and (max-width: 768px) {
+    justify-content: space-around;
+    align-items: center;
+  }
+
   &__logo {
     width: 15vw;
   }
@@ -11,6 +16,10 @@
     position: fixed;
     top: 10px;
     right: 20px;
+
+    @media screen and (max-width: 768px) {
+      width: 0.5em;
+    }
   }
 
   &__scoresBtn {
@@ -25,14 +34,14 @@
     border-radius: 14px;
     padding: 0.5em;
     color: #23b0bd;
-    background-color: white;
+    background-color: #ffffe0;
+    text-decoration: none;
 
     @media screen and (max-width: 768px) {
       writing-mode: horizontal-tb;
-      bottom: 10px;
-      top: initial;
-      right: initial;
-      left: 29%;
+      font-size: 0.5em;
+      position: initial;
+      border-radius: 10px;
     }
   }
 
