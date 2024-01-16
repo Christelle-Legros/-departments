@@ -54,7 +54,6 @@ const QuizByNumber = () => {
       setDepartmentNumber(currentObject.code);
     } else {
       console.log("Tous les objets ont été extraits.");
-      // Ajouter ici une action pour indiquer que tous les objets ont été extraits
     }
   };
 
@@ -75,7 +74,6 @@ const QuizByNumber = () => {
 
   // formater le temps donné initialement en secondes
   const formatTime = (timeInSeconds) => {
-    // const hours = Math.floor(timeInSeconds / 3600);
     const minutes = Math.floor((timeInSeconds % 3600) / 60);
     const seconds = timeInSeconds % 60;
 

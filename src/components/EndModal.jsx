@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import closeImg from "../assets/croix_rouge.png";
 import { Link } from "react-router-dom";
 // import { auth } from "./firebase"; // Chemin vers ton fichier firebase.js
-import { db } from "./firebase"; // Importe l'instance de Firestore
+import { db } from "./firebase";
 import { ref, push } from "firebase/database";
 
 const EndModal = ({

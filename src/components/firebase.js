@@ -1,8 +1,6 @@
-import firebase from "firebase/compat/app";
 import "firebase/compat/auth"; // Importe seulement le module d'authentification si c'est tout ce dont tu as besoin
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import { getDatabase, ref, push } from "firebase/database";
+import { getDatabase } from "firebase/database";
 
 // config récupérée sur le site firebase
 const firebaseConfig = {
@@ -17,7 +15,6 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 // export const auth = app.auth(); // Exporte l'instance d'authentification
-// const db = getFirestore(app);
 const db = getDatabase(app);
 
 export { app, db };

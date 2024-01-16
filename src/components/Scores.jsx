@@ -44,6 +44,7 @@ const Scores = () => {
         <ol>
           {scores
             .filter((score) => score.typeGame === "number")
+            .slice(0, 12)
             .map((score) => (
               <li key={score.id}>
                 {score.nom} - Score: {score.score} - Temps: {score.temps}
@@ -57,6 +58,7 @@ const Scores = () => {
         <ol>
           {scores
             .filter((score) => score.typeGame === "name")
+            .slice(0, 12)
             .map((score) => (
               <li key={score.id}>
                 {score.nom} - Score: {score.score} - Temps: {score.temps}
