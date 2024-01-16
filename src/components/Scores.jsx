@@ -22,7 +22,7 @@ const Scores = () => {
           if (b.score !== a.score) {
             return b.score - a.score;
           }
-          return a.temps - b.temps;
+          return a.temps.localeCompare(b.temps);
         });
 
         setScores(scoresArray);
