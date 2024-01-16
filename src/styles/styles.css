@@ -442,6 +442,12 @@ button:hover {
   align-items: center;
   font-family: "studyalone";
 }
+@media screen and (max-width: 768px) {
+  .endModal__btnBottom-save {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .endModal__btnBottom-save p {
   font-size: 0.7em;
   font-family: "studyalone";
@@ -454,9 +460,19 @@ button:hover {
   margin-right: 0.8em;
   font-size: 0.7em;
 }
+@media screen and (max-width: 768px) {
+  .endModal__btnBottom-save input {
+    width: 40vw;
+  }
+}
 .endModal__btnBottom-save button {
   max-width: 18vw;
   font-size: 15px;
+}
+@media screen and (max-width: 768px) {
+  .endModal__btnBottom-save button {
+    max-width: 35vw;
+  }
 }
 .endModal #nbGoodAnswers {
   font-family: "studyalone";

@@ -113,6 +113,11 @@
     justify-content: space-between;
     align-items: center;
     font-family: "studyalone";
+
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__btnBottom-save p {
@@ -127,11 +132,19 @@
     margin-left: 0.8em;
     margin-right: 0.8em;
     font-size: 0.7em;
+
+    @media screen and (max-width: 768px) {
+      width: 40vw;
+    }
   }
 
   &__btnBottom-save button {
     max-width: 18vw;
     font-size: 15px;
+
+    @media screen and (max-width: 768px) {
+      max-width: 35vw;
+    }
   }
 
   #nbGoodAnswers {
