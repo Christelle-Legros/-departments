@@ -18,3 +18,8 @@ button:hover {
   border: 1px white solid;
   transition: 0.2s ease-in-out;
 }
+
+button:disabled:hover {
+  background-color: #f65b74;
+  border: 0;
+}

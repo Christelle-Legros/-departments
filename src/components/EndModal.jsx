@@ -91,20 +91,24 @@ const EndModal = ({
               placeholder="Votre nom"
             />
 
-            <Link to="/classement">
-              <button
-                onClick={() =>
-                  enregistrerScore(
-                    userName.toUpperCase(),
-                    counterGoodAnswers,
-                    formatTime(time),
-                    typeGame
-                  )
-                }
-              >
-                Save le score
-              </button>
-            </Link>
+            {userName === "" ? (
+              <button disabled>Save le score</button>
+            ) : (
+              <Link to="/classement">
+                <button
+                  onClick={() =>
+                    enregistrerScore(
+                      userName.toUpperCase(),
+                      counterGoodAnswers,
+                      formatTime(time),
+                      typeGame
+                    )
+                  }
+                >
+                  Save le score
+                </button>
+              </Link>
+            )}
           </div>
 
           <Link to="/">
