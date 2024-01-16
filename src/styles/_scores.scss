@@ -18,11 +18,10 @@
 
 .scores li {
   font-family: "studyalone";
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  margin-left: -0.8em;
 
   @media screen and (max-width: 768px) {
     font-size: 0.8em;
+    margin-left: -1em;
   }
 }
