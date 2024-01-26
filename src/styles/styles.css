@@ -393,7 +393,7 @@ button:disabled:hover {
 @media screen and (max-width: 768px) {
   .endModal__msg {
     text-align: center;
-    font-size: 1.3em;
+    font-size: 1.2em;
     max-width: 80%;
   }
 }
@@ -402,6 +402,11 @@ button:disabled:hover {
   margin-top: 0.2em;
   margin-bottom: 0.4em;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .endModal__counterMsg {
+    font-size: 1em;
+  }
 }
 .endModal__btnAccueil {
   font-size: 20px;
@@ -415,6 +420,11 @@ button:disabled:hover {
   font-size: 0.8em;
   align-items: center;
   margin-top: 1em;
+}
+@media screen and (max-width: 768px) {
+  .endModal__errors {
+    margin-top: 0.5em;
+  }
 }
 .endModal__errors__errors_list {
   display: grid;
@@ -432,6 +442,11 @@ button:disabled:hover {
   font-family: "studyalone";
   font-size: 0.9em;
   margin: 0;
+}
+@media screen and (max-width: 768px) {
+  .endModal__errors__errors_list {
+    font-size: 0.8em;
+  }
 }
 .endModal__btnBottom {
   display: flex;
