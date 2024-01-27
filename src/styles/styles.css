@@ -479,6 +479,8 @@ button:disabled:hover {
 @media screen and (max-width: 768px) {
   .endModal__btnBottom-save input {
     width: 45vw;
+    height: 1.8em;
+    font-size: 0.6em;
   }
 }
 .endModal__btnBottom-save button {
